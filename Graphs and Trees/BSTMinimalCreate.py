@@ -30,7 +30,9 @@ class TreeNode:
         self.name = name
         self.left = left
         self.right = right
-        
+
+    def priint(self):
+        print(self.name)
 
 def createMinimalBST(arr):
     tree = createMinimalBST_(arr, 0, len(arr), 'left')
@@ -40,7 +42,8 @@ def createMinimalBST(arr):
 def createMinimalBST_(arr, start, end, side):
         
     if end <= start:
-        print(f'start {start}, end {end}, side {side}')
+        if DEBUG:
+            print(f'start {start}, end {end}, side {side}')
         return None
     
     # Find the mid-point
@@ -67,8 +70,8 @@ def priint(node, side, level=1):
         priint(node.right, 'R', level)
 
     
-# Test
-array = range(1,11)
-bst = createMinimalBST(array)
-print("\nPrinting Binary Search Tree...\n")
-priint(bst, 'C')
+# Test - Uncomment when needed to test
+#array = range(1,11)
+#bst = createMinimalBST(array)
+#print("\nPrinting Binary Search Tree...\n")
+#priint(bst, 'C')
