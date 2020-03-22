@@ -14,6 +14,7 @@ Learnings:
 
 import BSTMinimalCreate as bstCreator
 from LinkedList import LinkedList
+from tree_graph_common import priint_tree
 
 
 def bstToLinkedList(node):
@@ -49,23 +50,24 @@ def bstToLinkedList_(root, lists, level):
 
 # Test
 # Let's create a BST first using BSTMinimalCreate that we created before
-array = range(1,20)
-bst = bstCreator.createMinimalBST(array)
-print("\nPrinting Binary Search Tree...")
-bstCreator.priint(bst, 'C')
-
-# Let's convert BST to LinkedList
-print("\nPrinting Levels...")
-lls = bstToLinkedList(bst)
-
-# Let's print the LinkedLists
-for index in range(len(lls)):
-    ll = lls[index]
-    print(f'Level = {index}')
-    node = ll.head
-    while node != None:
-        print(node.data.name)
-        node = node.next
-
+if __name__ == "__main__":
+    array = range(1,20)
+    bst = bstCreator.createMinimalBST(array)
+    print("\nPrinting Binary Search Tree...")
+    priint_tree(bst, 'C')
+    
+    # Let's convert BST to LinkedList
+    print("\nPrinting Levels...")
+    lls = bstToLinkedList(bst)
+    
+    # Let's print the LinkedLists
+    for index in range(len(lls)):
+        ll = lls[index]
+        print(f'Level = {index}')
+        node = ll.head
+        while node != None:
+            print(node.data.name)
+            node = node.next
+    
 
 

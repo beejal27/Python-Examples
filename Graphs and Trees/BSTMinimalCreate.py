@@ -22,17 +22,9 @@ Learnings:
     
 @author: Beejal
 """
+from tree_graph_common import TreeNode, priint_tree
 
 DEBUG = False
-
-class TreeNode:
-    def __init__(self, name, left = None, right = None):
-        self.name = name
-        self.left = left
-        self.right = right
-
-    def priint(self):
-        print(self.name)
 
 def createMinimalBST(arr):
     tree = createMinimalBST_(arr, 0, len(arr), 'left')
@@ -61,17 +53,10 @@ def createMinimalBST_(arr, start, end, side):
     return node
 
 
-def priint(node, side, level=1):
-    if node != None:
-        spaces = ' ' * level
-        print(f'{spaces}{node.name} {side}')
-        level += 1
-        priint(node.left, 'L', level)
-        priint(node.right, 'R', level)
 
-    
-# Test - Uncomment when needed to test
-#array = range(1,11)
-#bst = createMinimalBST(array)
-#print("\nPrinting Binary Search Tree...\n")
-#priint(bst, 'C')
+if __name__== "__main__" :
+    #Test - Uncomment when needed to test
+    array = range(1,11)
+    bst = createMinimalBST(array)
+    print("\nPrinting Binary Search Tree...\n")
+    priint_tree(bst, 'C')

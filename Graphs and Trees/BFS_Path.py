@@ -83,17 +83,18 @@ def search(graph, start, end):
     return False
 
 # Run some tests
-print('\n')
-start, end = node_0, node_3
-print(f'Checking path from {start.name} to {end.name}')
-result = search(graph, start, end)  
-print(f'Path from {start.name} to {end.name} = {result}')
-print('\n')
-
-
-start, end = node_2, node_0
-print(f'Checking path from {start.name} to {end.name}')
-result = search(graph, node_2, node_0)
-print(f'Path from {start.name} to {end.name} = {result}')
+if __name__ == "__main__":
+    print('\n')
+    start, end = node_0, node_3
+    print(f'Checking path from {start.name} to {end.name}')
+    result = search(graph, start, end)  
+    print(f'Path from {start.name} to {end.name} = {result}')
+    print('\n')
+    
+    
+    start, end = node_2, node_0
+    print(f'Checking path from {start.name} to {end.name}')
+    result = search(graph, node_2, node_0)
+    print(f'Path from {start.name} to {end.name} = {result}')
 
 

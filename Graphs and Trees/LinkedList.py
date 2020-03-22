@@ -52,8 +52,9 @@ class LinkedList:
             
 
 # Test - Uncomment to run test
-llist = LinkedList()
-for index in range(11, 20, 2):
-    llist.add(index)
-
-llist.priint()
+if __name__ == "__main__":
+    llist = LinkedList()
+    for index in range(11, 20, 2):
+        llist.add(index)
+    
+    llist.priint()
