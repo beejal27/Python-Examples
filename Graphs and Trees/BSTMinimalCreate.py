@@ -19,21 +19,20 @@ Learnings:
     arguments: 'start' and 'end'). Hence I appended a little underscore to the
     second method name.
 
-    
 @author: Beejal
 """
 from tree_graph_common import TreeNode, priint_tree
 
-DEBUG = False
+DEBUG = True
 
 def createMinimalBST(arr):
-    tree = createMinimalBST_(arr, 0, len(arr), 'left')
+    tree = createMinimalBST_(arr, 0, len(arr)-1, 'center')
     return tree
 
 
 def createMinimalBST_(arr, start, end, side):
         
-    if end <= start:
+    if end < start:
         if DEBUG:
             print(f'start {start}, end {end}, side {side}')
         return None
@@ -43,14 +42,14 @@ def createMinimalBST_(arr, start, end, side):
     if DEBUG:
         print(f'start {start}, end {end}, side {side}, mid {mid}, value = {arr[mid]}')
 
-    node = TreeNode(arr[mid])
+    mid_node = TreeNode(arr[mid])
     
     # Invoke BST Creation for Left Sub Tree
-    node.left  = createMinimalBST_(arr, start, mid, 'left')
+    mid_node.left  = createMinimalBST_(arr, start, mid-1, 'left')
     
     # Invoke BST Creation for Right Sub Tree
-    node.right = createMinimalBST_(arr, mid+1, end, 'right')
-    return node
+    mid_node.right = createMinimalBST_(arr, mid+1, end, 'right')
+    return mid_node
 
 
 

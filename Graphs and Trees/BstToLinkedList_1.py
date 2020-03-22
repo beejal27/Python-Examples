@@ -51,7 +51,7 @@ def bstToLinkedList_(root, lists, level):
 # Test
 # Let's create a BST first using BSTMinimalCreate that we created before
 if __name__ == "__main__":
-    array = range(1,20)
+    array = range(1,11)
     bst = bstCreator.createMinimalBST(array)
     print("\nPrinting Binary Search Tree...")
     priint_tree(bst, 'C')
