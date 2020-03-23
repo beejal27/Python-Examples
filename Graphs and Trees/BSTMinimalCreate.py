@@ -5,7 +5,7 @@ Created on Fri Mar 20 08:56:14 2020
 Given an array of sorted numbers (ascending order), this program creates a Binary Search Tree.
 Binary Search Tree is a type of Binary Tree that meets following criteria.
 
-    "all decendents on left of node n < n < all decendents on right of node n"
+    "all descendents on left of node n <= n < all descendents on right of node n"
 
 Binary Tree is a type of tree where each node has upto two children.
 Set DEBUG to True to see the verbose log statements. Helps better understand the inner working of algorithm.
@@ -23,7 +23,7 @@ Learnings:
 """
 from tree_graph_common import TreeNode, priint_tree
 
-DEBUG = True
+DEBUG = False
 
 def createMinimalBST(arr):
     tree = createMinimalBST_(arr, 0, len(arr)-1, 'center')
@@ -55,7 +55,7 @@ def createMinimalBST_(arr, start, end, side):
 
 if __name__== "__main__" :
     #Test - Uncomment when needed to test
-    array = range(1,11)
+    array = range(1,10)
     bst = createMinimalBST(array)
     print("\nPrinting Binary Search Tree...\n")
     priint_tree(bst, 'C')

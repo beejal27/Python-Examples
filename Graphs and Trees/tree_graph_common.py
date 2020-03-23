@@ -15,7 +15,7 @@ class TreeNode:
         print(self.name)
 
 
-def priint_tree(node, side, level=1):
+def priint_tree(node, side = 'C', level=1):
     if node != None:
         spaces = ' ' * level
         print(f'{spaces}{node.name} {side}')
