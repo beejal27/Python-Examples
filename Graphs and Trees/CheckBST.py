@@ -80,7 +80,7 @@ if __name__ == "__main__":
 ###########
     
 def checkBST(node, min_val, max_val):
-    # Stopping Condition - Evaluate if it's correct????????
+    # Stopping Condition
     if node == None:
         return True
     
