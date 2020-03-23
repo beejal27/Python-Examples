@@ -10,7 +10,7 @@ two subtrees of any node never differ by more than 1.
 """
 from tree_graph_common import TreeNode, priint_tree
 
-DEBUG = True
+DEBUG = False
 
 if __name__ == "__main__":
     # Instantiate some TreeNode objects
@@ -25,41 +25,41 @@ if __name__ == "__main__":
     tn9 = TreeNode(9)
     
     # Set the relationship between TreeNode objects
-    tn5.left  = tn3
+    tn5.left  = tn2
     tn5.right = tn8
     
-    tn3.left  = tn2
-    tn3.right = tn4
+    tn2.left  = tn1
+    tn2.right = tn3
     
-    tn2.left = tn1
+    tn3.right = tn4
     
 # =============================================================================
 # So we have laid the tree as follows
-#  5 C
-#   3 L
-#    2 L
-#     1 L
+# 5 C
+#  2 L
+#   1 L
+#   3 R
 #    4 R
-#   8 R    
+#  8 R  
 #     
 # =============================================================================
 
 # In Current form the tree is Unbalanced, Uncomment following line(s) (1st or 1st and 2nd or all 3) to make the Tree Balanced
-#    tn8.left  = tn7
+#    tn8.left  = tn6
 #    tn8.right = tn9
-#    tn7.left  = tn6
+#    tn6.right = tn7
 
 # =============================================================================
 # Uncommenting all 3 lines gives following Balanced Tree
-#  5 C
-#   3 L
-#    2 L
-#     1 L
+# 5 C
+#  2 L
+#   1 L
+#   3 R
 #    4 R
-#   8 R
-#    7 L
-#     6 L
-#    9 R    
+#  8 R
+#   6 L
+#    7 R
+#   9 R   
 #     
 # =============================================================================
 
@@ -117,8 +117,8 @@ if __name__ == "__main__":
 ############
 # As can be seen above getHeight() method is called repeatedly on the same nodes.
 # It can be avoided if we check the height difference in getHeight() method itself.
-# Belong checkHeight() method is the revision of getHeight() method.
-# If 
+# Below checkHeight() method is the revision of getHeight() method.
+
 
 def checkHeight(tn):
     if tn == None:
@@ -131,7 +131,7 @@ def checkHeight(tn):
     if right_height == -1:
         return -1
     
-    height_diff = left_height - right_height
+    height_diff = abs(left_height - right_height)
     if DEBUG:
         print(f'\tHeight difference at Node {tn.name} = {height_diff}; LN = {left_height}, RN = {right_height}')
 
