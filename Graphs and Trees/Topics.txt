@@ -4,8 +4,8 @@ Graphs and Trees:
 3. BstToLinkedList.py
 4. LinkedList
 5. Tree Traversal
+6. CheckBalancedBinaryTree.py
 
 Queue:
-CheckBalancedBinaryTree.py
 CheckBST.py
 BSTNextNode.py
