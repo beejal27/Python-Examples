@@ -6,10 +6,11 @@ Created on Sun Mar 22 09:38:13 2020
 """
 
 class TreeNode:
-    def __init__(self, name, left = None, right = None):
+    def __init__(self, name, left = None, right = None, parent = None):
         self.name = name
         self.left = left
         self.right = right
+        self.parent = parent
 
     def priint(self):
         print(self.name)
