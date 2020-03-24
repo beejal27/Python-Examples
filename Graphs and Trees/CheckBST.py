@@ -3,7 +3,7 @@
 Created on Mon Mar 23 07:47:18 2020
 Given a Binary Tree, this program checks if it is Binary Search Tree.
 Definition of Binary Search Tree:
-    "all descendents on left of node n <= n < all descendents on right of node n"
+    "all descendants on left of node n <= n < all descendants on right of node n"
 
 @author: Beejal
 """

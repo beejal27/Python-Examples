@@ -5,7 +5,7 @@ Created on Fri Mar 20 08:56:14 2020
 Given an array of sorted numbers (ascending order), this program creates a Binary Search Tree.
 Binary Search Tree is a type of Binary Tree that meets following criteria.
 
-    "all descendents on left of node n <= n < all descendents on right of node n"
+    "all descendants on left of node n <= n < all descendants on right of node n"
 
 Binary Tree is a type of tree where each node has upto two children.
 Set DEBUG to True to see the verbose log statements. Helps better understand the inner working of algorithm.
