@@ -1,11 +1,13 @@
 Graphs and Trees:
-1. BSF_Path.py (Breadth First Search)
-2. BSTMinimalCreate.py
-3. BstToLinkedList.py
-4. LinkedList
-5. Tree Traversal
-6. CheckBalancedBinaryTree.py
+1. BSF_Path.py (Breadth First Search) - Algorithm (Breadth First Search - BFS) to search if path exists between two given nodes.
+2. BSTMinimalCreate.py - Algorithm to create a Binary Search Tree (BST)
+3. BstToLinkedList.py - Algo to create list of LinkedList from given BST. Each LinkedList contains node at same level.
+4. LinkedList.py - Data Structure to create a LinkedList object.
+5. Tree Traversal - Discussed In-Order (Left, Node, Right), Pre-Order (Node, Left, Right) & Post-Order (Left, Right, Node)
+6. CheckBalancedBinaryTree.py - Algorithm to check if given Binary Tree is Balanced.
 
 Queue:
-CheckBST.py
-BSTNextNode.py
+7. CheckBST.py - Algorithm to check if given Binary Tree is Binary Search Tree.
+8. BSTNextNode.py - Algorithm to get the next node for a given node in Binary Search Tree.
+9. OrderProjecs.py - Algorithm to Order Projects according to their dependencies.
+
