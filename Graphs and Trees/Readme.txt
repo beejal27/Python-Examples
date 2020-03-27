@@ -8,8 +8,8 @@ List of topics already discussed:
 5. Tree Traversal - Discussed In-Order (Left, Node, Right), Pre-Order (Node, Left, Right) & Post-Order (Left, Right, Node)
 6. CheckBalancedBinaryTree.py - Algorithm to check if given Binary Tree is Balanced.
 7. CheckBST.py - Algorithm to check if given Binary Tree is Binary Search Tree.
+8. BSTNextNode.py - Algorithm to get the next node for a given node in Binary Search Tree.
 
 List of topics to be discussed:
-8. BSTNextNode.py - Algorithm to get the next node for a given node in Binary Search Tree.
-9. OrderProjecs.py - Algorithm to Order Projects according to their dependencies.
+9. OrderProjecs1.py - Algorithm to Order Projects according to their dependencies.
 
