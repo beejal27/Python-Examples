@@ -33,17 +33,19 @@ f                          0
 
 Take out the projects with 0 Dependencies. In above case it's 'f'. Once 'f' is 
 built, then the Depencencies of the projects that depend on 'f' 
-(i.e. Child Projects of 'f') can be reduced by 1. We have 'b' & 'd' as Child Projects 
+(i.e. Child Projects of 'f') can be reduced by 1. We have 'b' & 'a' as Child Projects 
 of 'f'. So let's reduce the Dependencies of these two projects.
 
 Project                    Dependencies
-a                          1
+a                          0   *
 b                          0   *
 c                          1
-d                          1   *
+d                          2   
 
 Again take out the projects with 0 Dependencies. Now we get 'b'. We repeat the 
 same process for 'b' as we did for 'f'.
+
+Finally the order in which the projects should be built is : ['f', 'b', 'a', 'd', 'c']
 
 @author: Beejal
 """
@@ -110,7 +112,7 @@ def orderProjects(graph):
     toBeProcessed = 0
     
     # Return me projects with zero dependencies
-    projectWithoutDependencies(projects, orderedProjects, offset=0)
+    projectWithoutDependencies(projects, orderedProjects)
     while toBeProcessed < total_projects:
         try:
             prj = orderedProjects[toBeProcessed]
@@ -121,12 +123,12 @@ def orderProjects(graph):
         for child in prj.getChildren():
             child.decrementDependencies()
         
-        projectWithoutDependencies(prj.getChildren(), orderedProjects, offset=0)
+        projectWithoutDependencies(prj.getChildren(), orderedProjects)
         toBeProcessed += 1
         
     return orderedProjects
 
-def projectWithoutDependencies(projects, orderedProjects, offset):
+def projectWithoutDependencies(projects, orderedProjects):
     for proj in projects:
         if proj.getNumberDependencies() == 0:
             orderedProjects.append(proj)
@@ -136,16 +138,14 @@ if __name__ == '__main__':
     g = Graph()
     
   
-    g.addEdge('a', 'd')
-    g.addEdge('f', 'b')
-    g.addEdge('b', 'd')
+    # Add 'c,b' for circular dependency
+    edges= ['a,d', 'f,b', 'b,d', 'f,a', 'd,c']
     
-    g.addEdge('f', 'a')
-    g.addEdge('d', 'c')
+    for edge in edges:
+        names = edge.split(',')
+        g.addEdge(names[0], names[1])
     
-    # Uncomment to add a circular dependency
-    #g.addEdge('a', 'f')    
-    
+   
     print([op.name for op in orderProjects(g)])
         
             
