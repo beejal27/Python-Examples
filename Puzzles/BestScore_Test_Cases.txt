@@ -1,0 +1,61 @@
+Test Case 1:
+Input: 
+number of elements, no that can be dropped: 10, 2
+elements:
+6
+-5
+3
+-7
+6
+-1
+10
+-8
+-8
+8
+Desired output:24
+
+Test Case2:
+number of elements, no that can be dropped: 10, 3
+elements:
+6
+-5
+3
+-7
+6
+-1
+10
+-8
+-8
+8
+Desired output:27
+
+Test Case 3:
+number of elements, no that can be dropped: 10, 4
+elements:
+6
+-5
+3
+-7
+6
+-1
+10
+-8
+-8
+8
+Desired output:32
+
+Test Case 4:
+number of elements, no that can be dropped: 10, 6
+elements:
+6
+-5
+3
+-7
+6
+-1
+10
+-8
+-8
+8
+Desired output:33
+
