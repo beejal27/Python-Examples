@@ -1,6 +1,56 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Mar 29 07:55:05 2020
+We are given a set of project dependencies like (f, a). Here project 'a' depends on project 'f'.
+For any project to be built, all the dependencies should be built first.
+Given a set of dependencies, we need to find the order in which the projects 
+need to be built.
+
+In this approach we use Depth First Search for traversing the Graph.
+
+Example: (a, d), (f, b), (b, d), (f, a), (d, c) 
+        c
+        ^
+        |
+        |
+        d<--------------b
+        ^               ^
+        |               |
+        |               |
+        a<--------------f
+
+Output: [f, b, a, d, c]
+
+We randomly pick up a node of Graph & do Depth First Search on the graph. Let's say 
+we start with Node a. So the traversal would be as follows. Put the project to Stack (LIFO) 
+that has no dependency or all their dependencies have been visited.
+    Node a
+        Node d
+            Node c
+    Node f
+        Node a (Already Visited)
+        Node b
+            Node d (Already Visited)
+            Node c (Already Visited)
+
+In following case, we have circular dependency.
+
+        c<------------------|
+        ^                   |                       
+        |                   |
+        |                   |
+        d<--------------b   |
+        ^               ^   |
+        |               |   |
+        |               |   |
+        a<--------------f----
+
+    Node a
+        Node d
+            Node c
+                Node f
+                    Node a (a is child to f, which is contrary to earlier discovery that f is child to a)
+
 
 @author: Beejal
 """
@@ -99,7 +149,7 @@ if __name__ == '__main__':
     name = 'AikWarium Product Graph'
     g = Graph(name) 
 
-    edges= ['a,d', 'f,b', 'b,d', 'f,a', 'd,c']
+    edges= ['a,d', 'f,b', 'b,d', 'f,a', 'd,c', 'c,f']
     for edge in edges:
         names = edge.split(',')
         g.addEdge(names[0], names[1])
