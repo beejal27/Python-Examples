@@ -9,7 +9,8 @@ List of topics already discussed:
 6. CheckBalancedBinaryTree.py - Algorithm to check if given Binary Tree is Balanced.
 7. CheckBST.py - Algorithm to check if given Binary Tree is Binary Search Tree.
 8. BSTNextNode.py - Algorithm to get the next node for a given node in Binary Search Tree.
+9. OrderProjecs1.py - Algorithm to Order Projects according to their dependencies.
 
 List of topics to be discussed:
-9. OrderProjecs1.py - Algorithm to Order Projects according to their dependencies.
+10. OrderProjecs2.py - Algorithm to Order Projects according to their dependencies (Using Depth First Search approach).
 
