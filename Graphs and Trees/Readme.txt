@@ -14,3 +14,4 @@ List of topics already discussed:
 List of topics to be discussed:
 10. OrderProjecs2.py - Algorithm to Order Projects according to their dependencies (Using Depth First Search approach).
 11. CommonAncestor1.py - Algorithm to find a Common ancestor between two nodes in a Binary Tree. Nodes have link to parent nodes.
+12. CommonAncestor2.py - Algorithm to find a Common ancestor between two nodes in a Binary Tree. Nodes have link to parent nodes.
