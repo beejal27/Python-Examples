@@ -2,7 +2,7 @@
 Given two nodes in a Binary Tree, this program finds common ancestor between these two nodes.
 In the example given below, the two nodes are given as 7 & 15. The common ancestor between these
 two nodes is 10.
-                        20
+                           20
                             |
                 ------------------------
                 |                      |
@@ -41,6 +41,7 @@ def common_ancestor(node_p, node_q):
         print(f'\tUpper Node {node_upper.name}, Lower Node {node_lower.name}')
 
     # Now we move node_lower upward by delta steps to arrive at a parent which is at same depth as node_upper
+    delta = abs(delta)
     node_lower = moveUpBy(node_lower, delta)
     if DEBUG:
         print(f'\tArrived at {node_lower.name} after moving {delta} steps upwards')
@@ -106,6 +107,8 @@ if __name__ == '__main__':
     priint_tree(tn20)
 
     #print(depth(None))
+    # TODO: Fix Following
+    common_ancestor(tn05, tn07)
     common_ancestor(tn07, tn17)
     common_ancestor(tn07, tn20)
     common_ancestor(tn07, tn10)
