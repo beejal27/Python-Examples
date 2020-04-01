@@ -107,7 +107,6 @@ if __name__ == '__main__':
     priint_tree(tn20)
 
     #print(depth(None))
-    # TODO: Fix Following
     common_ancestor(tn05, tn07)
     common_ancestor(tn07, tn17)
     common_ancestor(tn07, tn20)
